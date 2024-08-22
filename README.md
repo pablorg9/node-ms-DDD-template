@@ -82,7 +82,7 @@ src
    yarn install
    ```
 
-3. Build de project:
+3. Build the project:
 
     ```bash
    yarn build
