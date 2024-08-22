@@ -88,7 +88,7 @@ src
    yarn build
    ```
 
-3. Run locally:
+4. Run locally:
 
     ```bash
    yarn local
