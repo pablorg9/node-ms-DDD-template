@@ -7,8 +7,19 @@ import { USER_REPOSITORY } from '@setup/Symbols';
 export class UserService {
     constructor(@inject(USER_REPOSITORY) private _userRepository: IUserRepository) {}
 
+    async getUserById(id: string): Promise<User> {
+        return this._userRepository.getUserById(id);
+    }
+
     async createUser(user: User): Promise<void> {
-        // Aquí puede ir lógica adicional, como verificar el email, etc.
         await this._userRepository.save(user);
+    }
+
+    async updateUser(user: User): Promise<User> {
+        return this._userRepository.update(user);
+    }
+
+    async deleteUser(id: string): Promise<void> {
+        await this._userRepository.delete(id);
     }
 }

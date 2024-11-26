@@ -9,7 +9,6 @@ export const errorMiddleware = (
     res: Response,
     _next: NextFunction,
 ): Response | void => {
-    // ir agregando el manejo de errores esperado
     if (error.status && error.status === 401) {
         return new ApiErrorResponse(401, ErrorCode.INVALID_ACCESS_TOKEN, error.message).send(res);
     }

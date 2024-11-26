@@ -1,4 +1,7 @@
 export interface IUserDTO {
-    id: number;
+    id?: string;
     name: string;
+    email: string;
+    address: string;
+    phone: number;
 }

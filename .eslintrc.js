@@ -18,6 +18,7 @@ module.exports = {
     rules: {
         '@typescript-eslint/no-dynamic-delete': 'error',
         '@typescript-eslint/no-require-imports': 'error',
+        '@typescript-eslint/no-explicit-any': 1,
         indent: [
             'error',
             4,
